@@ -1,6 +1,6 @@
 ﻿
 html {
-    background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+    background-image: url(StonesAndWater.jpg);
     background-size: cover;
     font-family: 'helvetica neue';
     text-align: center;
@@ -19,7 +19,7 @@ body {
 .clock {
     width: 30rem;
     height: 30rem;
-    border: 20px solid white;
+    border: 20px solid rgb(11, 116, 119);
     border-radius: 50%;
     margin: 50px auto;
     position: relative;
@@ -32,12 +32,18 @@ body {
     width: 100%;
     height: 100%;
     transform: translateY(-3px); /* account for the height of the clock hands */
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
 }
 
 .hand {
     width: 50%;
     height: 6px;
-    background: black;
+    background: rgb(245, 236, 227);
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.15s;
+    transition-timing-function: cubic-bezier(0.1, 1.5, 0.58, 1);
 }
